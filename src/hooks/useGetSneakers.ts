@@ -12,7 +12,7 @@ const useGetSneakers = (): ReturnProps => {
   const isLoading = ref(false)
   const { sneakers, setSneakers, favorites, setFavorites } = useSneakersStore()
 
-  onMounted( async () => {
+  onMounted(async () => {
     if (sneakers.value.length) return
     isLoading.value = true
     try {

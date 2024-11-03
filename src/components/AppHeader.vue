@@ -1,7 +1,7 @@
 <script setup lang="ts">
-  import { useCartStore } from '@/store/cart'
+import { useCartStore } from '@/store/cart'
 
-  const { totalAmount, toggle } = useCartStore()
+const { totalAmount, toggle } = useCartStore()
 </script>
 
 <template>
@@ -16,18 +16,21 @@
       </div>
     </router-link>
     <nav class="flex items-center gap-10">
-      <li :onclick="() => toggle()" class="flex items-center cursor-pointer gap-3 text-gray-500 hover:text-gray-800">
-        <img src="/cart.svg" alt="cart">
+      <li
+        :onclick="() => toggle()"
+        class="flex items-center cursor-pointer gap-3 text-gray-500 hover:text-gray-800"
+      >
+        <img src="/cart.svg" alt="cart" />
         <p>{{ totalAmount }} руб.</p>
       </li>
       <router-link to="/favorites">
         <li class="flex items-center cursor-pointer gap-3 text-gray-500 hover:text-gray-800">
-          <img src="/heart.svg" alt="favorite">
+          <img src="/heart.svg" alt="favorite" />
           <p>Закладки</p>
         </li>
       </router-link>
       <li class="flex items-center cursor-pointer gap-3 text-gray-500 hover:text-gray-800">
-        <img src="/profile.svg" alt="cart">
+        <img src="/profile.svg" alt="cart" />
         <p>Профиль</p>
       </li>
     </nav>

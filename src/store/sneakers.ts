@@ -11,11 +11,11 @@ interface State {
   setSneakers: (sneakers: sneaker[]) => void
 }
 
-export const useSneakersStore = create<State>(set => ({
+export const useSneakersStore = create<State>((set) => ({
   sneakers: [],
   favorites: [],
   sortBy: 'По популярности',
-  changeSort: (sortBy) => set({sortBy}),
-  setFavorites: (favorites) => set({favorites}),
-  setSneakers: (sneakers) => set({sneakers}) 
+  changeSort: (sortBy) => set({ sortBy }),
+  setFavorites: (favorites) => set({ favorites }),
+  setSneakers: (sneakers) => set({ sneakers })
 }))

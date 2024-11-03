@@ -10,10 +10,10 @@ interface State {
   setTotalAmount: (num: number) => void
 }
 
-export const useCartStore = create<State>(set => ({
+export const useCartStore = create<State>((set) => ({
   totalAmount: 0,
   open: false,
   cart: new Map<number, sneaker>(),
-  toggle: () => set(state => ({ open: !state.open })),
-  setTotalAmount: (num) => set(state => ({ totalAmount: state.totalAmount + num })) 
+  toggle: () => set((state) => ({ open: !state.open })),
+  setTotalAmount: (num) => set((state) => ({ totalAmount: state.totalAmount + num }))
 }))

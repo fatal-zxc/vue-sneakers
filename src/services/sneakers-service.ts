@@ -3,7 +3,7 @@ import axios from 'axios'
 import { liteSneaker, sneaker } from '@/types'
 
 const sneakersInstance = axios.create({
-  baseURL: 'https://a901b666fee6fcd5.mokky.dev',
+  baseURL: 'https://a901b666fee6fcd5.mokky.dev'
 })
 
 export const getAllSneakers = async () => {
@@ -22,6 +22,10 @@ export const updateFavorites = async (newFavorites: number[]) => {
 }
 
 export const createOrder = async (items: sneaker[], totalAmount: number) => {
-  const { data } = await sneakersInstance.post<{items: sneaker[], totalAmount: number, id: number}>('/orders', {items, totalAmount})
+  const { data } = await sneakersInstance.post<{
+    items: sneaker[]
+    totalAmount: number
+    id: number
+  }>('/orders', { items, totalAmount })
   return data.id
 }

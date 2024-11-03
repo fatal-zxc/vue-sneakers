@@ -1,7 +1,7 @@
-<script setup lang='ts'>
-  import CardList from '@/components/CardList.vue'
+<script setup lang="ts">
+import CardList from '@/components/CardList.vue'
 </script>
 
 <template>
-  <CardList :favorited="true"/>
+  <CardList :favorited="true" />
 </template>
